@@ -1,4 +1,61 @@
+/* Custom theme variables (you can tweak colors here) */
+:root{
+  --primary: #3b82f6;
+  --muted: #6c757d;
+}
 
-body {
-    font-family: Arial, sans-serif;
+/* HERO styles */
+.hero-section{
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(120deg, rgba(11,59,120,0.6), rgba(56,115,255,0.5)), url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 4rem 0;
+}
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
+}
+
+/* glass card (hero right) */
+.glass-card{
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+/* small interactions */
+.hover-zoom{
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.hover-zoom:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* card icons style */
+.icon-wrap i{ font-size: 2.2rem; color: var(--primary); }
+
+/* footer small tweaks */
+footer a { text-decoration: none; }
+
+/* showcase images fallback size */
+.carousel-item img{ height: 360px; object-fit: cover; }
+
+/* contact map placeholder */
+.map-placeholder{
+  height: 180px;
+  background: linear-gradient(90deg,#f8f9fa,#eef2ff);
+  color: var(--muted);
+}
+
+/* responsive tweaks */
+@media (max-width: 992px){
+  .hero-section{ min-height: 48vh; padding: 3rem 0; }
+  .carousel-item img{ height: 260px; }
 }
